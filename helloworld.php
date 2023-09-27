@@ -14,4 +14,5 @@
         echo "<p>Variable z inside function is : $z</p>";
     }
     mytest();
+    echo "X is $x";
 ?>
