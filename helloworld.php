@@ -12,6 +12,7 @@
     {
         $z = 50;
         echo "<p>Variable z inside function is : $z</p>";
+        echo "wee";
     }
     mytest();
     echo "X is $x<br>";
