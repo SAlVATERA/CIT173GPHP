@@ -14,5 +14,6 @@
         echo "<p>Variable z inside function is : $z</p>";
     }
     mytest();
-    echo "X is $x";
+    echo "X is $x<br>";
+    echo $x * $y;
 ?>
