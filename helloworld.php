@@ -7,6 +7,7 @@
     echo "<br>";
     echo $x + $y;
     echo "<br>-------";
+    echo "It works";
     function mytest()
     {
         $z = 50;
