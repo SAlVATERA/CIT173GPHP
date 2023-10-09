@@ -12,14 +12,8 @@
     print("Good - I haven't totally");
     print("lost my mind.<br>");
     }
-    $many = 2.2888800;
-    $many_2 = 2.2111200;
-    $few = $many + $many_2;
-    print($many + $many_2 = $few);
-    if (TRUE)
-    print("<br>This will always print<br>");
-    else
-    print("This will never print<br>");
+    
+    
     $variable = "name";
     $literally = 'My $variable will not print!\\n';
     print($literally);

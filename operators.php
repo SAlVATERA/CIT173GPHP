@@ -1,7 +1,7 @@
 <?php
 $true_num = 3 + 0.14159;
-$true_str = "Tried and true";
-$true_array[49] = "An array element";
+$true_str = "<br>Tried and true";
+$true_array[49] = "<br>An array element";
 $false_array = array();
 $false_null = NULL;
 $false_num = 999 - 999;
@@ -18,8 +18,15 @@ $string_2 = "This is a somewhat longer, singly quoted string";
 $string_39 = "This string has thirty-nine characters";
 $string_0 = "";
 $variable = "name";
-$literally = 'My $variable will not print!\\n';
+$literally = '<br>My $variable will not print!\\n';
 print($literally);
-$literally = "My $variable will print!\\n";
+$literally = "<br>My $variable will print!\\n";
 print($literally);
+$x = 4;
+function assignx () {
+$x = 0;
+print "<br>\$x inside function is $x. ";
+}
+assignx();
+print "<br>\$x outside of function is $x. ";
 ?>
