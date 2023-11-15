@@ -42,4 +42,5 @@ INSERT INTO Course (CourseID,CourseName,Credits)
 VALUES (50, "TLE", 90);
 INSERT INTO Instructor (InstructorID,FirstName,LastName, Email, PhoneNo)
 VALUES (01, "Leonard Prim ", "Reyes", "Primus@gmail.com", 39846587364587);
-INSERT INTO Enrollment (EnrollmentID, Enrollmentdate,Grade)
+INSERT INTO Enrollment (EnrollmentID, Enrollmentdate,Grade,StudentID,CourseID)
+VALUES();
