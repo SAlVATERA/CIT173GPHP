@@ -1,0 +1,40 @@
+./mysql -u root
+CREATE DATABASE StudentRecord;
+CREATE TABLE student (
+    StudentID int NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255),
+    DateOfBirth varchar (255) NOT NULL,
+    Email varchar (255) NOT NUll,
+    PhoneNo int NOT NUll,
+    PRIMARY KEY (StudentID)
+);
+CREATE TABLE Course (
+    CourseID int NOT NULL,
+    CourseName varchar(255) NOT NULL,
+    Credits int,
+    PRIMARY KEY (CourseID)
+);
+CREATE TABLE Instructor (
+    InstructorID int NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255),
+    Email varchar(255) NOT NULL,
+    PhoneNo int NOT NULL,
+    PRIMARY KEY (InstructorID)
+);
+CREATE TABLE Enrollment (
+    EnrollmentID int NOT NULL,
+    Enrollmentdate varchar (255) NOT NULL,
+    Grade int NOT NUll,
+    StudentID int,
+    FOREIGN KEY (StudentID) REFERENCES student(StudentID),
+    CourseID int,
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
+INSERT INTO student (StudentID, FirstName, LastName, DateOfBirth, Email, PhoneNo)
+VALUES (02, "jason", "salvatera", "july 23, 2003", "jason@gmail.com", 09090909091);
+SELECT * FROM student;
+UPDATE student
+SET DateOfBirth = "July 22 , 2003"
+WHERE StudentID = 01;
