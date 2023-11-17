@@ -64,4 +64,21 @@
     else {
         echo "Error: " . $sql2 . "<br>" . $conn->error;
     }
+    $sql3 = "SELECT * FROM Enrollment";
+    $result3 = $conn->query($sql3);
+
+    if ($result3) {
+        while ($row = $result3->fetch_assoc()) {
+            echo "EnrollmentID: ". $row["EnrollmentID"] . "<br>"
+            . "Enrollmentdate: ". $row["Enrollmentdate"]. "<br>"
+            . "Grade: ". $row["Grade"]. "<br>"
+            . "StudentID: ". $row["StudentID"]. "<br>"
+            . "CourseID: ". $row["CourseID"]. "<br>"
+            . "<br>" 
+            ;
+    }
+    }
+    else {
+        echo "Error: " . $sql3 . "<br>" . $conn->error;
+    }
 ?>
