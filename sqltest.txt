@@ -1,5 +1,5 @@
 ./mysql -u root
-CREATE DATABASE ;
+CREATE DATABASE StudentRecord;
 CREATE TABLE student (
     StudentID int NOT NULL,
     FirstName varchar(255) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE Enrollment (
     FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
 INSERT INTO student (StudentID, FirstName, LastName, DateOfBirth, Email, PhoneNo)
-VALUES (02, "jason", "salvatera", "july 23, 2003", "jason@gmail.com", 09090909091);
+VALUES (01, "jason", "salvatera", "july 23, 2003", "jason@gmail.com", 09090909091);
 SELECT * FROM student;
 UPDATE student
 SET DateOfBirth = "July 22 , 2003"
@@ -43,4 +43,12 @@ VALUES (50, "TLE", 90);
 INSERT INTO Instructor (InstructorID,FirstName,LastName, Email, PhoneNo)
 VALUES (01, "Leonard Prim ", "Reyes", "Primus@gmail.com", 39846587364587);
 INSERT INTO Enrollment (EnrollmentID, Enrollmentdate,Grade,StudentID,CourseID)
-VALUES();
+VALUES(
+    1, 
+    "May 7,2022",
+    90,
+    (SELECT StudentID FROM student WHERE StudentID = 1),
+    (SELECT CourseID FROM course)
+);
+UPDATE Enrollment
+DROP TABLE Enrollment;
