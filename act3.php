@@ -22,6 +22,8 @@ $id = "1";
 //     echo "Error: " . $sql . "<br>" . $conn->error;
 // }
 
+// reading sql query
+
 $sql = "SELECT id, username, email FROM users";
 $result = $conn->query($sql);
 
@@ -32,15 +34,31 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$newUsername = "UpdatedJohnDoe";
-$idToUpdate = 1;
 
-$sql = "UPDATE users SET username='$newUsername' WHERE id=$idToUpdate";
+// updating values
 
-if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
-} else {
-    echo "Error updating record: " . $conn->error;
-}
+// $newUsername = "UpdatedJohnDoe";
+// $idToUpdate = 1;
+
+// $sql = "UPDATE users SET username='$newUsername' WHERE id=$idToUpdate";
+
+// if ($conn->query($sql) === TRUE) {
+//     echo "Record updated successfully";
+// } else {
+//     echo "Error updating record: " . $conn->error;
+// }
+
+//delete query
+
+// $idToDelete = 1;
+
+// $sql = "DELETE FROM users WHERE id=$idToDelete";
+
+// if ($conn->query($sql) === TRUE) {
+//     echo "Record deleted successfully";
+// } else {
+//     echo "Error deleting record: " . $conn->error;
+// }
+
 $conn->close();
 ?>
